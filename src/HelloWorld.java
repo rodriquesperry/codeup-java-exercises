@@ -5,5 +5,11 @@ public class HelloWorld {
 
         int myFavoriteNumber = 10;
         System.out.println("\nMy favorite number is " + myFavoriteNumber);
+
+        String myString = "This is a string value.";
+        System.out.println(myString);
+
+
+
     }
 }
