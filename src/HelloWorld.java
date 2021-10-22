@@ -9,7 +9,8 @@ public class HelloWorld {
         String myString = "This is a string value.";
         System.out.println(myString);
 
-
+        long myNumber;
+        System.out.println(myNumber);
 
     }
 }
