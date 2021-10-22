@@ -36,10 +36,23 @@ public class ConsoleExercises {
         // What happens if you enter more than 3 words?
             // Only returns the first three words
 
-        System.out.print("Enter a sentence: ");
-//        String mySentence = scanner.next();
-        String mySentence = scanner.nextLine();
-        System.out.printf("Your sentence was: %s", mySentence);
+//        System.out.print("Enter a sentence: ");
+////        String mySentence = scanner.next();
+//        String mySentence = scanner.nextLine();
+//        System.out.printf("Your sentence was: %s", mySentence);
+
+        System.out.println("Enter length of room: ");
+        System.out.println("Enter width of room: ");
+        int roomLength =  scanner.nextInt();
+        int roomWidth = scanner.nextInt();
+        int perimeter = 2 * (roomLength + roomWidth);
+        int area = roomLength * roomWidth;
+        System.out.printf("The area of your room is %d", area);
+        System.out.printf("\nThe perimeter of your room is %d", perimeter);
+
+
+
+
 
 
     }
