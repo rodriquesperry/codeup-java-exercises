@@ -18,6 +18,23 @@ public class ConsoleExercises {
             //	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
             //	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
             //	at ConsoleExercises.main(ConsoleExercises.java:11)
+
+        // Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
+        System.out.println("Enter word 1: ");
+        System.out.println("Enter a word 2: ");
+        System.out.println("Enter a word 3: ");
+
+        String word1 = scanner.next();
+        String word2 = scanner.next();
+        String word3 = scanner.next();
+
+        System.out.println("Your first word is: " + word1);
+        System.out.println("Your second word is: " + word2);
+        System.out.println("Your third word is: " + word3);
+        // What happens if you enter less than 3 words?
+            //Never returns
+        // What happens if you enter more than 3 words?
+            // Only returns the first three words
     }
 
 }
