@@ -10,7 +10,7 @@ public class HelloWorld {
         System.out.println(myString);
 
         long myNumber;
-        myNumber = 3.14;
+        myNumber = 123L;
         System.out.println(myNumber);
 
     }
