@@ -9,9 +9,16 @@ public class HelloWorld {
         String myString = "This is a string value.";
         System.out.println(myString);
 
-        float myNumber;
-        myNumber = 3.14;
+        long myNumber;
+        myNumber = 123;
         System.out.println(myNumber);
+
+        int x = 5;
+        System.out.println(x++);
+        System.out.println(x);
+
+
+
 
     }
 }
