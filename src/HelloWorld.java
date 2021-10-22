@@ -1,5 +1,10 @@
+
+
 public class HelloWorld {
     public static void main(String[] args) {
+
+
+
         System.out.print("Hello, ");
         System.out.print("World!");
 // #1
@@ -21,6 +26,7 @@ public class HelloWorld {
 //        myNumber = 3.14F;
         myNumber = (float) 3.14;
         System.out.println(myNumber);
+
 
 
 // #10
