@@ -17,7 +17,9 @@ public class HelloWorld {
         System.out.println(++x);
         System.out.println(x);
 
-        String class;
+        String theNumberThree = "three";
+        Object o = theNumberThree;
+        int three = (int) o;
 
 
     }
