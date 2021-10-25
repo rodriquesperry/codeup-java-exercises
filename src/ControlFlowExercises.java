@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
@@ -54,19 +56,36 @@ public class ControlFlowExercises {
 //        for (long i = 2; i <= 1000000; i *= i) {
 //            System.out.println(i);
 //        }
+        //FizzBuzz
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 2 == 1 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else if (i % 2 == 1) {
+//                System.out.println("Fizz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
 
-        for (int i = 1; i <= 100; i++) {
-            if (i % 2 == 1 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (i % 2 == 1) {
-                System.out.println("Fizz");
-            } else {
-                System.out.println(i);
+        Scanner scanner = new Scanner(System.in);
+
+        String userContinue = "y";
+        do{
+            System.out.print("What number would you like to go up to? ");
+            int userInput = scanner.nextInt();
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------ | -----");
+             for (int i = 1; i <= userInput; i++) {
+
+                 System.out.println( "   " + i + "   |   " + (i * i) + "" + "   |   " +    (i * i * i));
             }
+            System.out.println("Do you wish to continue? [y/n]");
+            userContinue = scanner.next();
+            userContinue.equals('y');
+        } while (userContinue.equalsIgnoreCase("y"));
 
-        }
 
     }
 }
