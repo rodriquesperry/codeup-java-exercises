@@ -36,7 +36,7 @@ public class ConsoleExercises {
         // What happens if you enter more than 3 words?
             // Only returns the first three words
 
-//        System.out.print("Enter a sentence: ");
+//        System.out.println("Enter a sentence: ");
 ////        String mySentence = scanner.next();
 //        String mySentence = scanner.nextLine();
 //        System.out.printf("Your sentence was: %s", mySentence);
