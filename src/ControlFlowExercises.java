@@ -72,20 +72,45 @@ public class ControlFlowExercises {
         Scanner scanner = new Scanner(System.in);
 
         String userContinue = "y";
-        do{
-            System.out.print("What number would you like to go up to? ");
-            int userInput = scanner.nextInt();
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------ | -----");
-             for (int i = 1; i <= userInput; i++) {
+//        do{
+//            System.out.print("What number would you like to go up to? ");
+//            int userInput = scanner.nextInt();
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------ | -----");
+//             for (int i = 1; i <= userInput; i++) {
+//
+//                 System.out.println( "   " + i + "   |   " + (i * i) + "" + "   |   " +    (i * i * i));
+//            }
+//            System.out.println("Do you wish to continue? [y/n]");
+//            userContinue = scanner.next();
+//            userContinue.equals('y');
+//        } while (userContinue.equalsIgnoreCase("y"));
 
-                 System.out.println( "   " + i + "   |   " + (i * i) + "" + "   |   " +    (i * i * i));
+
+
+       do {
+           System.out.println("Enter in your grade: ");
+           int grade = scanner.nextInt();
+
+           if (grade >= 88) {
+                System.out.println("Your grade is an A");
+
+            } else if (grade >= 80) {
+                System.out.println("Your grade is an B");
+
+            } else if (grade >= 67) {
+                System.out.println("Your grade is an C");
+
+            } else if (grade >= 60) {
+                System.out.println("Your grade is an D");
+
+            } else {
+                System.out.println("Your grade is an F");
             }
-            System.out.println("Do you wish to continue? [y/n]");
-            userContinue = scanner.next();
-            userContinue.equals('y');
+
+           System.out.println("Do you wish to continue? [y/n]");
+           userContinue = scanner.next();
+           userContinue.equals('y');
         } while (userContinue.equalsIgnoreCase("y"));
-
-
     }
 }
