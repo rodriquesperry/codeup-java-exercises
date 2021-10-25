@@ -9,9 +9,10 @@ public class ControlFlowExercises {
 //            System.out.print(i);
 //            i++;
 //        }
-//        int i = 0;
+//
 
         //Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+        // int i = 0;
 //        do {
 //
 //            System.out.println(i);
@@ -29,15 +30,30 @@ public class ControlFlowExercises {
 //        } while (i >= -10);
 
         //Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
-        long i = 2;
-        do {
+//        long i = 2;
+//        do {
+//
+//            System.out.println(i);
+//            i *= i;
+//
+//        } while (i <= 1000000);
 
-            System.out.println(i);
-            i *= i;
+        //Refactor the previous two exercises to use a for loop instead.
+//        for (int i = 5; i <= 15; i++) {
+//            System.out.println(i);
+//        }
 
-        } while (i <= 1000000);
+//        for (int i = 0; i <= 100; i += 2) {
+//            System.out.println(i);
+//        }
 
+//        for (int i = 100; i >= -10; i -=5) {
+//            System.out.println(i);
+//        }
 
+//        for (long i = 2; i <= 1000000; i *= i) {
+//            System.out.println(i);
+//        }
 
     }
 }
