@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+
         //Create an integer variable i with a value of 5.
         //Create a while loop that runs so long as i is less than or equal to 15
         //Each loop iteration, output the current value of i, then increment i by one.
@@ -69,9 +71,8 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        Scanner scanner = new Scanner(System.in);
 
-        String userContinue = "y";
+//        String userContinue = "y";
 //        do{
 //            System.out.print("What number would you like to go up to? ");
 //            int userInput = scanner.nextInt();
@@ -87,8 +88,10 @@ public class ControlFlowExercises {
 //        } while (userContinue.equalsIgnoreCase("y"));
 
 
+            //Convert given number grades into letter grades.
+        String userContinue = "y";
 
-       do {
+        do {
            System.out.println("Enter in your grade: ");
            int grade = scanner.nextInt();
            if (grade >= 96) {
