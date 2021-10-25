@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class ConsoleExercises {
     public static void main(String[] args) {
-//        double pi = 3.14159;
-//        System.out.format("The value of pi is approximately %.2f%n", pi);
+        double pi = 3.14159;
+        System.out.format("The value of pi is approximately %.2f%n", pi);
 
         // Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
         Scanner scanner = new Scanner(System.in);
@@ -41,19 +41,16 @@ public class ConsoleExercises {
 //        String mySentence = scanner.nextLine();
 //        System.out.printf("Your sentence was: %s", mySentence);
 
-        System.out.println("Enter length of room: ");
-        System.out.println("Enter width of room: ");
+        System.out.print("Enter length of room: ");
         int roomLength =  scanner.nextInt();
+
+        System.out.print("Enter width of room: ");
         int roomWidth = scanner.nextInt();
+
         int perimeter = 2 * (roomLength + roomWidth);
         int area = roomLength * roomWidth;
         System.out.printf("The area of your room is %d", area);
         System.out.printf("\nThe perimeter of your room is %d", perimeter);
-
-
-
-
-
 
     }
 
