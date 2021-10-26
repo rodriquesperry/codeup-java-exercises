@@ -51,14 +51,15 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-//        for (int i = 100; i >= -10; i -=5) {
+//        for (int i = 100; i >= -10; i -= 5) {
 //            System.out.println(i);
 //        }
 
 //        for (long i = 2; i <= 1000000; i *= i) {
 //            System.out.println(i);
 //        }
-        //FizzBuzz
+
+//        FizzBuzz
 //        for (int i = 1; i <= 100; i++) {
 //            if (i % 2 == 1 && i % 5 == 0) {
 //                System.out.println("FizzBuzz");
@@ -71,28 +72,26 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-
+        //Display a table of powers.
 //        String userContinue = "y";
 //        do{
 //            System.out.print("What number would you like to go up to? ");
 //            int userInput = scanner.nextInt();
 //            System.out.println("number | squared | cubed");
-//            System.out.println("------ | ------ | -----");
+//            System.out.println("------ | ------  | -----");
 //             for (int i = 1; i <= userInput; i++) {
-//
-//                 System.out.println( "   " + i + "   |   " + (i * i) + "" + "   |   " +    (i * i * i));
+//                 System.out.printf("%7d|%9d|%6d\n", i, (i * i), (i * i * i));
 //            }
 //            System.out.println("Do you wish to continue? [y/n]");
 //            userContinue = scanner.next();
-//            userContinue.equals('y');
 //        } while (userContinue.equalsIgnoreCase("y"));
 
 
-            //Convert given number grades into letter grades.
+        //Convert given number grades into letter grades.
         String userContinue = "y";
 
         do {
-           System.out.println("Enter in your grade: ");
+           System.out.print("Enter in your grade: ");
            int grade = scanner.nextInt();
            if (grade >= 96) {
                System.out.println("Your grade is an A+");
@@ -124,7 +123,8 @@ public class ControlFlowExercises {
 
            System.out.println("Do you wish to continue? [y/n]");
            userContinue = scanner.next();
-           userContinue.equals('y');
         } while (userContinue.equalsIgnoreCase("y"));
+
+        scanner.close();
     }
 }
