@@ -1,6 +1,11 @@
 public class StringExercise {
 
     public static void main(String[] args) {
+
+        String myString = "We don't need no education \nWe don't need no thought control. ";
+        System.out.println(myString);
+        System.out.println();
+
         String noEducation = "We don't need no education";
         System.out.println(noEducation);
         System.out.println();
