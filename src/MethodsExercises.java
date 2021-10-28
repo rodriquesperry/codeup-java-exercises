@@ -1,10 +1,15 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
+
+
     public static void main(String[] args) {
         System.out.println(addition(3, 2));
         System.out.println(subtraction(3, 2));
         System.out.println(multiplication(10, 9));
         System.out.println(division(10, 0));
         System.out.println(modulus(10, 3));
+        System.out.println(getInteger());
     }
 
     public static int addition(int num1, int num2) {
@@ -17,12 +22,21 @@ public class MethodsExercises {
 
     public static int multiplication(int num1, int num2) {
 //        return num1 * num2;
-        int sum = 0;
-        for (int i = 1; i <= num1; i++) {
-            sum += num2;
-        }
-        return sum;
+//        int prod = 0;
+//        for (int i = 1; i <= num1; i++) {
+//            prod += num2;
+//        }
+//        return sum;
 
+        int prod = 0;
+//        if (num2 == 0) {
+//            return prod;
+//        }
+
+        if (num2 < 0) {
+            prod = (num1 + multiplication(num1, num2 - 1))
+;        }
+        return prod;
     }
 
     public static int division(int num1, int num2) {
@@ -34,8 +48,24 @@ public class MethodsExercises {
     }
 
     public static int modulus(int num1, int num2) {
-        return num1 % num2;
+        int i = num1 % num2;
+        return i;
     }
 
+    public static int getInteger() {
+        Scanner scanner = new Scanner(System.in);
+        int value;
+
+        do {
+            System.out.println("Enter an number between 1 - 10.");
+            value = scanner.nextInt();
+            scanner.nextLine();
+        } while (value < 1 || value > 10);
+
+        return value;
+
+    }
 
 }
+
+
