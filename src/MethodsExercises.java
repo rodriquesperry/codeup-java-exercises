@@ -11,6 +11,7 @@ public class MethodsExercises {
         System.out.println(modulus(10, 3));
         System.out.println(getInteger());
         System.out.println(factorial());
+//        System.out.println(random());
     }
 
     public static int addition(int num1, int num2) {
@@ -81,6 +82,19 @@ public class MethodsExercises {
         }
         return value;
     }
+
+//    public static int random() {
+//    }
+
+//    public static void roll() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter the number of sides for your dice");
+//        int userInput = scanner.nextInt();
+//        scanner.nextLine();
+//        System.out.println("Roll the dice");
+//
+//        return userInput;
+//    }
 
 }
 
