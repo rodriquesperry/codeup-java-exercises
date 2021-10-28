@@ -63,6 +63,7 @@ public class MethodsExercises {
             scanner.nextLine();
         } while (value < 1 || value > 10);
 
+        System.out.println("The value you entered was correct");
         return value;
     }
 
