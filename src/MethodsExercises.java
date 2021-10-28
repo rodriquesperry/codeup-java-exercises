@@ -10,6 +10,7 @@ public class MethodsExercises {
         System.out.println(division(10, 0));
         System.out.println(modulus(10, 3));
         System.out.println(getInteger());
+        System.out.println(factorial());
     }
 
     public static int addition(int num1, int num2) {
@@ -63,7 +64,21 @@ public class MethodsExercises {
         } while (value < 1 || value > 10);
 
         return value;
+    }
 
+    public static int factorial() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a number from 1 - 10.");
+        int input = scanner.nextInt();
+        scanner.nextLine();
+
+        int value = 1;
+
+        for (int i = 1; i <= input; i++) {
+            value *= i;
+        }
+        return value;
     }
 
 }
