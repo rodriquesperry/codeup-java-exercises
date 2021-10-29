@@ -1,2 +1,8 @@
-package util;public class InputTest {
+package util;
+
+public class InputTest {
+
+    public static void main (String[]args){
+        Input first = new Input();
+    }
 }

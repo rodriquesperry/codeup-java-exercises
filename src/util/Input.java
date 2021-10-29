@@ -59,10 +59,6 @@ public class Input {
         return this.scanner.nextDouble();
     }
 
-    public static void main (String[]args){
-        Input first = new Input();
-    }
-
 
 
 }
