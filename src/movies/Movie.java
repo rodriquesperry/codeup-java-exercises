@@ -40,7 +40,6 @@ public class Movie {
 
         for (Movie movie : movies) {
             if (movie.getCategory().equalsIgnoreCase(category)) {
-
                 System.out.println(movie.getName() + " | " + movie.getCategory());
             }
         }
