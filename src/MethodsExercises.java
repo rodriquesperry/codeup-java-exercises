@@ -9,9 +9,9 @@ public class MethodsExercises {
         System.out.println(multiplication(10, 9));
         System.out.println(division(10, 0));
         System.out.println(modulus(10, 3));
-        System.out.println(getInteger());
+        System.out.println(getInteger(12, 24));
         System.out.println(factorial());
-//        System.out.println(random());
+
     }
 
     public static int addition(int num1, int num2) {
@@ -54,24 +54,24 @@ public class MethodsExercises {
         return i;
     }
 
-    public static int getInteger() {
+    public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
         int value;
 
         do {
-            System.out.println("Enter an number between 1 - 10.");
+            System.out.printf("Enter an number between %d - %d.%n", min, max);
             value = scanner.nextInt();
             scanner.nextLine();
-        } while (value < 1 || value > 10);
+        } while (value < min || value > max);
 
-        System.out.println("The value you entered was correct");
+        System.out.printf("The value you entered was correct: %d%n", value);
         return value;
     }
 
     public static int factorial() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a number from 1 - 10.");
+        System.out.println("Enter a number to see it's factorial.");
         int input = scanner.nextInt();
         scanner.nextLine();
 
@@ -83,18 +83,8 @@ public class MethodsExercises {
         return value;
     }
 
-//    public static int random() {
-//    }
 
-//    public static void roll() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter the number of sides for your dice");
-//        int userInput = scanner.nextInt();
-//        scanner.nextLine();
-//        System.out.println("Roll the dice");
-//
-//        return userInput;
-//    }
+
 
 }
 

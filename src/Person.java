@@ -1,8 +1,12 @@
 public class Person {
     private String name;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -10,19 +14,19 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.println("Your new name is " + name);
-    }
-
-    public Person(String name) {
-       this.name = name;
+        System.out.println("Your new name is " + this.name);
     }
 
     public static void main(String[] args) {
-        Person rocky = new Person("rocky");
-        rocky.name = "Rocky P.";
+        Person rocky = new Person("Rocky");
 
-        System.out.println(rocky.getName());
+
+        rocky.name = "Rocky P.";
+        System.out.println("rocky.name = " + rocky.name);
+        String rockyName = rocky.getName();
+
         rocky.setName("Rodriques P.");
+        System.out.println("rocky.getName() = " + rocky.getName());
         rocky.sayHello();
 
 //        Person person1 = new Person("John");

@@ -1,17 +1,15 @@
 package util;
 
-
 import java.util.Scanner;
 
 public class Input {
-    public Scanner scanner;
+    private Scanner scanner;
 
+    //When an instance of this object is created, the scanner property should be set to a new instance of the Scanner class.
+    //Means we just need a Constructor
+    //constructor
     public Input() {
         this.scanner = new Scanner(System.in);
-        getString();
-        yesNo();
-        getInt(7, 14);
-        getDouble(1, 10);
         }
 
     public String getString () {
@@ -20,18 +18,23 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Enter yes or no.");
-        String userInput = scanner.nextLine();
+        String userInput = scanner.next();
 
-        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
-            return true;
-        }
-        return false;
+        return (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
+//        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
+//            return true;
+//        }
+//        return false;
     }
 
-    public int getInt ( int min, int max){
+    public int getInt () {
         System.out.println("Enter an integer.");
-        int userNum = scanner.nextInt();
+        return this.scanner.nextInt();
+    }
+    //The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max. The getDouble method should do the same thing, but with decimal numbers.
+    public int getInt ( int min, int max){
+        System.out.printf("Enter an integer between %d and %d. %n", min, max);
+        int userNum = this.scanner.nextInt();
         if (userNum < min || userNum > max) {
             return getInt();
         }
@@ -39,13 +42,12 @@ public class Input {
         return userNum;
     }
 
-    public int getInt () {
-        System.out.println("Enter an integer.");
-        return this.scanner.nextInt();
+    public double getDouble () {;
+        return this.scanner.nextDouble();
     }
 
     public double getDouble ( double min, double max){
-        System.out.println("Enter a double.");
+        System.out.printf("Enter a decimal number between %f and %f: %n", min, max);
         Double userNum = scanner.nextDouble();
         if (userNum < min || userNum > max) {
             return getDouble();
@@ -53,12 +55,5 @@ public class Input {
         System.out.println();
         return userNum;
     }
-
-    public double getDouble () {
-        System.out.println("Enter a double.");
-        return this.scanner.nextDouble();
-    }
-
-
 
 }
