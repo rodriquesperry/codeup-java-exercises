@@ -1,8 +1,15 @@
 public class Person {
     private String name;
+    protected int age;
 
     public Person(String name) {
         this.name = name;
+    }
+
+    //For Employee lecture
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
@@ -14,7 +21,7 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.println("Your new name is " + this.name);
+        System.out.println("Hello from " + this.name);
     }
 
     public static void main(String[] args) {
