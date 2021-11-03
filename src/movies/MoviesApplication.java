@@ -12,6 +12,8 @@ public class MoviesApplication {
 
     public static void main(String[] args) {
         Movie[] movies = MoviesArray.findAll();
+        System.out.println("movies.length = " + movies.length);
+        System.out.println("movies[1] = " + movies[1].getName());
         Input input = new Input();
         int userInput;
 
@@ -37,5 +39,26 @@ public class MoviesApplication {
             }
 
         } while (userInput != 0);
+
+        System.out.println("Didn't like what you saw?\n Would you like to add a movie to the collection? [y/n]");
+        scanner.nextLine();
+        String addMovieYN = scanner.nextLine();
+        if (addMovieYN.equalsIgnoreCase("y") || addMovieYN.equalsIgnoreCase("yes")) {
+            Movie[] moviesPlusOne = Arrays.copyOf(movies, movies.length + 1);
+            System.out.println("Enter your movie title.");
+            String title = scanner.nextLine();
+            moviesPlusOne[moviesPlusOne.length - 1].setName(title);
+            System.out.println(title);
+        }
+
+        //Increase the size of an Array
+
+
+        //Add to Array and item
+//        moviesPlusOne[moviesPlusOne.length - 1] = "Vacation";
+//
+//        for (Movie movie : moviesPlusOne) {
+//            System.out.println(movie);
+//        }
     }
 }

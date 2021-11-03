@@ -10,10 +10,12 @@ public class Rectangle {
     }
 
     public int getArea() {
-            return (this.length * this.width);
+        System.out.println("Below is the Rectangle getArea():");
+        return (this.length * this.width);
     }
 
     public int getPerimeter() {
+        System.out.println("Below is the Rectangle getPerimeter():");
         return ((2 * this.length) + (2 * this.width));
     }
 
