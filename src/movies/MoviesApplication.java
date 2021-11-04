@@ -40,16 +40,16 @@ public class MoviesApplication {
 
         } while (userInput != 0);
 
-        System.out.println("Didn't like what you saw?\n Would you like to add a movie to the collection? [y/n]");
-        scanner.nextLine();
-        String addMovieYN = scanner.nextLine();
-        if (addMovieYN.equalsIgnoreCase("y") || addMovieYN.equalsIgnoreCase("yes")) {
-            Movie[] moviesPlusOne = Arrays.copyOf(movies, movies.length + 1);
-            System.out.println("Enter your movie title.");
-            String title = scanner.nextLine();
-            moviesPlusOne[moviesPlusOne.length - 1].setName(title);
-            System.out.println(title);
-        }
+//        System.out.println("Didn't like what you saw?\n Would you like to add a movie to the collection? [y/n]");
+//        scanner.nextLine();
+//        String addMovieYN = scanner.nextLine();
+//        if (addMovieYN.equalsIgnoreCase("y") || addMovieYN.equalsIgnoreCase("yes")) {
+//            Movie[] moviesPlusOne = Arrays.copyOf(movies, movies.length + 1);
+//            System.out.println("Enter your movie title.");
+////            Movie title = scanner.nextLine();
+//            moviesPlusOne[moviesPlusOne.length - 1].setNameAndCat("Scareface", "Action");
+//            System.out.println("moviesPlusOne[moviesPlusOne.length - 1].getName() = " + moviesPlusOne[moviesPlusOne.length - 1].getName());
+//        }
 
         //Increase the size of an Array
 
