@@ -18,6 +18,11 @@ public class Student {
     public void addGrade(int grade) {
         grades.add(grade);
     }
+
+    public ArrayList<Integer> getGrades() {
+        return this.grades;
+    }
+
     // returns the average of the students grades
     public double getGradeAverage(){
         double gradeAvg = 0;
@@ -34,6 +39,7 @@ public class Student {
         rocky.addGrade(90);
         rocky.addGrade(90);
         System.out.println("rocky.getGradeAverage() = " + rocky.getGradeAverage());
+        System.out.println(rocky.grades);
 
     }
 }
