@@ -1,13 +1,15 @@
 package shapes;
 
 abstract class Shape {
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
-    public Shape(int length, int width) {
-        this.length = length;
-        this.width = width;
-    }
+
+    //Without this code below there is no need for super in Quadrilateral class
+//    public Shape(double length, double width) {
+//        this.length = length;
+//        this.width = width;
+//    }
 
 
 }

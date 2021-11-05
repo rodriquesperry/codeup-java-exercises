@@ -4,30 +4,27 @@ public class Rectangle extends Quadrilateral implements Measurable {
 //    protected int length;
 //    protected int width;
 
-    public Rectangle(int length, int width) {
+    public Rectangle(double length, double width) {
         super(length, width);
         this.length = length;
         this.width = width;
     }
 
-    public void setLength(int length) {
-
-    }
-
-    public void setWidth(int width) {
-
-    }
-
-
-    //Why does the code fail to compile if you leave off the getPerimeter method in Rectangle? This is probably due to Rectangle being a subclass of Quadrilateral and implementing Measurable.
     public double getPerimeter() {
-        return (2 * length + 2 * width);
+        return (2 * this.length + 2 * this.width);
     }
 
     public double getArea() {
-        return length * width;
+        return this.length * this.width;
     }
 
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
 
 
 //    public int getArea() {

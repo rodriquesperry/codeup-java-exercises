@@ -4,22 +4,26 @@ public class ShapesTest {
     public static void main(String[] args) {
         Measurable myShape;
 
-        myShape = new Rectangle(12, 10);
+        myShape = new Rectangle(4, 5);
         System.out.println("myShape.getPerimeter() = " + myShape.getPerimeter());
         System.out.println("myShape.getArea() = " + myShape.getArea());
 
 
-        myShape = new Square(12);
+        myShape = new Square(5);
         System.out.println("myShape.getPerimeter() = " + myShape.getPerimeter());
         System.out.println("myShape.getArea() = " + myShape.getArea());
 
-        //What happens if you try to call the getLength or getWidth methods of the myShape variable? Why?
+//Why does the code fail to compile if you leave off the getPerimeter method in Rectangle? This is probably due to Rectangle being a subclass of Quadrilateral and implementing Measurable.
+
+//What happens if you try to call the getLength or getWidth methods of the myShape variable? Why?
         //Answer: java: cannot find symbol
         //  symbol:   method getLength()
         //  location: variable myShape of type shapes.Measurable
-        //This is caused by them not being apart of the interface.
-        System.out.println("myShape.getLength() = " + myShape.getLength());
-        System.out.println("myShape.getWidth() = " + myShape.getWidth());
+
+//        System.out.println("myShape.getLength() = " + myShape.getLength());
+//        System.out.println("myShape.getWidth() = " + myShape.getWidth());
+
+
 
 
 //        Rectangle box1 = new Rectangle(5, 4);
