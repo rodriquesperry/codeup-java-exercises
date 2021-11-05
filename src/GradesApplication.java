@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class GradesApplication {
@@ -10,6 +11,8 @@ public class GradesApplication {
 
         Scanner scanner = new Scanner(System.in);
         HashMap<String, Student> students = new HashMap<>();
+
+
 
         Student justin = new Student("Justin", new ArrayList<>());
         justin.addGrade(80);
@@ -52,7 +55,7 @@ public class GradesApplication {
 
             if (students.containsKey(studentSelect)) {
                 System.out.println("Name: " + students.get(studentSelect).getName() + "\n" +
-                        "grades: " + students.get(studentSelect).getGrades() +
+                        "grades: " + students.get(studentSelect).getStudentGrades() +
                         "\nCurrent Average: " + students.get(studentSelect).getGradeAverage());
             } else {
                 System.out.println("Sorry, no student found with the GitHub username of " + studentSelect);

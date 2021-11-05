@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Student {
     private String name;
@@ -19,7 +20,7 @@ public class Student {
         grades.add(grade);
     }
 
-    public ArrayList<Integer> getGrades() {
+    public ArrayList<Integer> getStudentGrades() {
         return this.grades;
     }
 
@@ -33,6 +34,10 @@ public class Student {
         return gradeAvg/grades.size();
     }
 
+//    public ArrayList<Integer> getAllGrades() {
+//
+//    }
+
     public static void main(String[] args) {
        Student rocky = new Student("Rocky", new ArrayList<>());
         System.out.println("rocky.getName() = " + rocky.getName());
@@ -40,6 +45,13 @@ public class Student {
         rocky.addGrade(90);
         System.out.println("rocky.getGradeAverage() = " + rocky.getGradeAverage());
         System.out.println(rocky.grades);
+
+        Student ricky = new Student("Ricky", new ArrayList<>());
+        System.out.println("ricky.getName() = " + ricky.getName());
+        rocky.addGrade(80);
+        rocky.addGrade(80);
+        System.out.println("ricky.getGradeAverage() = " + ricky.getGradeAverage());
+        System.out.println(ricky.grades);
 
     }
 }
