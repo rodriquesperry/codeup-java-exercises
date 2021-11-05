@@ -25,7 +25,6 @@ public class Student {
             gradeAvg += grade;
 
         }
-        System.out.println("gradeAvg = " + gradeAvg);
         return gradeAvg/grades.size();
     }
 
