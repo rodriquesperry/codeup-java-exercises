@@ -9,7 +9,7 @@ public class InputTest {
         System.out.println("myString = " + myString);
 
         System.out.println("Do you feel like a developer?");
-        boolean developer = first.yesNo();
+        boolean developer = first.yesNo("Would you like to create a grocery list? [y/n]");
         System.out.println("developer = " + developer);
 
         int myInt = first.getInt();

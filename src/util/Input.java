@@ -12,23 +12,30 @@ public class Input {
         this.scanner = new Scanner(System.in);
         }
 
-    public String getString () {
-        System.out.println("Enter a string.");
+    public String getString() {
+        return this.scanner.nextLine();
+    }
+
+    public String getString(String s) {
         return this.scanner.nextLine();
     }
 
     public boolean yesNo() {
-        String userInput = scanner.next();
+        String input = scanner.nextLine();
 
-        return (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
+        return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
 //        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
 //            return true;
 //        }
 //        return false;
     }
 
+    public boolean yesNo(String s) {
+        System.out.println(s);
+        return yesNo();
+    }
+
     public int getInt () {
-        System.out.println("Enter an integer.");
         return this.scanner.nextInt();
     }
     //The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max. The getDouble method should do the same thing, but with decimal numbers.
