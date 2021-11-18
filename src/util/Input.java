@@ -1,5 +1,7 @@
 package util;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 public class Input {
@@ -40,15 +42,27 @@ public class Input {
     //The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max. The getDouble method should do the same thing, but with decimal numbers.
     public int getInt (int min, int max){
         int userNum = getInt();
-        if (userNum < min || userNum > max) {
-            return getInt();
+        try {
+            if (userNum < min || userNum > max) {
+                return getInt();
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            e.getMessage();
         }
+
         System.out.println();
         return userNum;
     }
 
     public int getInt(int min, int max, String prompt) {
         System.out.println(prompt);
+        try {
+            return getInt(min, max);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            e.getMessage();
+        }
         return getInt(min, max);
     }
 
@@ -69,22 +83,37 @@ public class Input {
             return number;
         } catch(NumberFormatException e) {
             System.out.println("Wrong Input, try again! ");
-            return getInt(prompt);
+
         }
+        return getInt(prompt);
     }
 
     public double getDouble(double min, double max){
         double userNum = Double.valueOf(getString());
-        if (userNum < min || userNum > max) {
-            return getDouble();
+
+        try {
+            if (userNum < min || userNum > max) {
+                return getDouble();
+            }
+
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            e.getMessage();
         }
         System.out.println();
         return userNum;
     }
 
     public double getDouble(double min, double max, String prompt){
-        System.out.println(prompt);
-        return getDouble(min, max);
+        try {
+            return getDouble(min, max);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            e.getMessage();
+            System.out.println("User did not enter valid input.");
+
+        }
+        return getDouble();
     }
 
     public double getDouble() throws NumberFormatException {
@@ -95,9 +124,8 @@ public class Input {
 //            e.printStackTrace();
 //            e.getMessage();
             System.out.println("User did not enter a valid double.");
-
-            return getDouble("Please enter a double.");
         }
+        return getDouble("Please enter a double.");
     }
 
     public double getDouble(String prompt) {
@@ -108,8 +136,8 @@ public class Input {
 
         } catch(NumberFormatException e) {
             System.out.println("Wrong type, Please eneter a double:");
-            return getDouble(prompt);
         }
+        return getDouble(prompt);
     }
 
 

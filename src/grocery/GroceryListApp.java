@@ -47,10 +47,10 @@ public class GroceryListApp {
             if (complete) {
                 //https://www.baeldung.com/java-map-entries-methods#the-keyset-method
                 for (String category : groceryList.keySet()) {
-
+                    System.out.println(category);
 
                     Collections.sort(groceryList.get(category));
-                    System.out.println(category);
+
 
                     for (String item : groceryList.get(category)) {
                         System.out.println(item);

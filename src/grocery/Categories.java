@@ -23,8 +23,5 @@ public class Categories {
         categories.forEach((key,value) -> System.out.println(key + "." + value ));
     }
 
-    public static void main(String[] args) {
-
-    }
 
 }
