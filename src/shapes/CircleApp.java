@@ -8,6 +8,7 @@ public class CircleApp {
 
         System.out.println("Please enter a circle's radius.");
         double radius = input.getDouble();
+        System.out.println(radius);
 
         Circle circle = new Circle(radius);
 

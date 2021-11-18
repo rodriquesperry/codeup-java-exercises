@@ -5,23 +5,32 @@ public class InputTest {
     public static void main (String[]args){
         Input first = new Input();
 
-        String myString = first.getString();
-        System.out.println("myString = " + myString);
+        if (first.yesNo("Want to enter a string? [y/n]")) {
+            System.out.println("Please enter a string.");
+            String response = first.getString();
+            System.out.println(response);
+        }
 
-        System.out.println("Do you feel like a developer?");
-        boolean developer = first.yesNo("Would you like to create a grocery list? [y/n]");
-        System.out.println("developer = " + developer);
+        if (first.yesNo("Would you like to enter a whole number?")) {
+            System.out.println("Please enter a whole number");
+            int integer = first.getInt();
+            System.out.println(integer);
+        }
 
-        int myInt = first.getInt();
-        System.out.println("myInt = " + myInt);
+        boolean b = first.yesNo("Do you feel like a developer?");
+        System.out.println(b);
 
-        int myInt2 = first.getInt(3, 15);
-        System.out.println("myInt2 = " + myInt2);
+        if (first.yesNo("Would you like to enter a double?")) {
+            System.out.println("Please enter a double.");
+            double myDouble = first.getDouble();
+            System.out.println(myDouble);
+        }
 
-        double myDouble = first.getDouble();
-        System.out.println("myDouble = " + myDouble);
+//        if (first.yesNo("Would you like to convert a binary to an integer?")) {
+//            System.out.println("Please enter a binary number");
+//            int convertedBinary = first.getBinary();
+//            System.out.println(convertedBinary);
+//        }
 
-        double myDouble2 = first.getDouble(1.5, 10.5);
-        System.out.println("myDouble2 = " + myDouble);
     }
 }

@@ -1,13 +1,14 @@
 package grocery;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 public class Categories {
-   static HashMap<Integer, String> categories;
+  public HashMap<Integer, String> categories;
 
     public Categories() {
-        categories = new HashMap<>();
+        this.categories = new HashMap<>();
         categories.put(1, "Veggies");
         categories.put(2, "Fruits");
         categories.put(3, "Meats");
@@ -15,11 +16,15 @@ public class Categories {
         categories.put(5, "Drinks");
         categories.put(6, "Snacks");
 
+
     }
 
-    public Map showCategories() {
-        return categories;
+    public void showCategories() {
+        categories.forEach((key,value) -> System.out.println(key + "." + value ));
     }
 
+    public static void main(String[] args) {
+
+    }
 
 }

@@ -15,23 +15,24 @@ public class Student {
     public String getName() {
         return this.name;
     }
+
     // adds the given grade to the grades property
     public void addGrade(int grade) {
         grades.add(grade);
     }
 
-    public ArrayList<Integer> getStudentGrades() {
-        return this.grades;
-    }
-
     // returns the average of the students grades
     public double getGradeAverage(){
-        double gradeAvg = 0;
+        double sum = 0;
         for (Integer grade : grades) {
-            gradeAvg += grade;
+            sum += grade;
 
         }
-        return gradeAvg/grades.size();
+        return sum/grades.size();
+    }
+
+    public ArrayList<Integer> getStudentGrades() {
+        return this.grades;
     }
 
 //    public ArrayList<Integer> getAllGrades() {
@@ -39,19 +40,26 @@ public class Student {
 //    }
 
     public static void main(String[] args) {
-       Student rocky = new Student("Rocky", new ArrayList<>());
+        Student rocky = new Student("Rocky", new ArrayList<>());
         System.out.println("rocky.getName() = " + rocky.getName());
-        rocky.addGrade(90);
+        rocky.addGrade(100);
         rocky.addGrade(90);
         System.out.println("rocky.getGradeAverage() = " + rocky.getGradeAverage());
         System.out.println(rocky.grades);
 
         Student ricky = new Student("Ricky", new ArrayList<>());
         System.out.println("ricky.getName() = " + ricky.getName());
-        rocky.addGrade(80);
-        rocky.addGrade(80);
+        ricky.addGrade(80);
+        ricky.addGrade(80);
         System.out.println("ricky.getGradeAverage() = " + ricky.getGradeAverage());
         System.out.println(ricky.grades);
+
+        Student steven = new Student("Steven", new ArrayList<>());
+        System.out.println("steven.getName() = " + steven.getName());
+        steven.addGrade(80);
+        steven.addGrade(90);
+        System.out.println("steven.getGradeAverage() = " + steven.getGradeAverage());
+
 
     }
 }

@@ -12,8 +12,6 @@ public class GradesApplication {
         Scanner scanner = new Scanner(System.in);
         HashMap<String, Student> students = new HashMap<>();
 
-
-
         Student justin = new Student("Justin", new ArrayList<>());
         justin.addGrade(80);
         justin.addGrade(90);
@@ -54,8 +52,8 @@ public class GradesApplication {
             String studentSelect = scanner.nextLine();
 
             if (students.containsKey(studentSelect)) {
-                System.out.println("Name: " + students.get(studentSelect).getName() + "\n" +
-                        "grades: " + students.get(studentSelect).getStudentGrades() +
+                System.out.println("Name: " + students.get(studentSelect).getName() +
+                        "\ngrades: " + students.get(studentSelect).getStudentGrades() +
                         "\nCurrent Average: " + students.get(studentSelect).getGradeAverage());
             } else {
                 System.out.println("Sorry, no student found with the GitHub username of " + studentSelect);
